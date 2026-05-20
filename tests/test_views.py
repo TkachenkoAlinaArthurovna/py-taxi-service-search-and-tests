@@ -36,7 +36,8 @@ class PrivateViewsTests(TestCase):
         self.assertIn("manufacturer_list", response.context)
 
     def test_car_list_view(self):
-        manufacturer = Manufacturer.objects.create(name="BMW", country="Germany")
+        manufacturer = Manufacturer.objects.create(name="BMW",
+                                                   country="Germany")
         Car.objects.create(model="X5", manufacturer=manufacturer)
 
         response = self.client.get(reverse("taxi:car-list"))
