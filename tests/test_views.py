@@ -85,7 +85,7 @@ class PrivateViewsTests(TestCase):
         Driver.objects.create_user(
             username="john_driver",
             password="12345",
-            license_number="ABC12345",
+            license_number="ABC12346",
         )
         Driver.objects.create_user(
             username="bob_driver",
